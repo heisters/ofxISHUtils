@@ -4,7 +4,7 @@ An easy-to-use FBO-based bloom filter.
 
     class testApp : public ofBaseApp {
       TextureBloomer bloomer;
-      ofxFBOTexture fbo;
+      ofFbo fbo;
       void setup(){
         bloomer.setup(ofGetWidth(), ofGetHeight());
       }
@@ -23,4 +23,4 @@ An easy-to-use FBO-based bloom filter.
       }
     }
 
-Requires ofxFBOTexture and ofxShader.
+Requires ofFbo and ofShader.
