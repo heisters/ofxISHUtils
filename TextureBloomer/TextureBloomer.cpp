@@ -12,7 +12,7 @@ void TextureBloomer::setBlend(GLenum sfactor, GLenum dfactor) {
 
 void TextureBloomer::update(ofBaseDraws &drawable, const int passes, const float radiuses[]){
 	fbos.current().begin();
-        ofClear(0, 0, 0, 1);
+        ofClear(0, 0, 0, 0);
 		drawable.draw(0,0);
 	fbos.current().end();
 
@@ -30,7 +30,7 @@ void TextureBloomer::update(ofBaseDraws &drawable, const int passes, const float
 	glEnable(GL_BLEND);
 	glBlendFunc(blendSFactor, blendDFactor);
 		fbos.current().begin();
-            ofClear(0, 0, 0, 1);
+            ofClear(0, 0, 0, 0);
 			fbos.prev().draw(0,0);
 			drawable.draw(0,0);
 		fbos.current().end();

@@ -20,6 +20,7 @@ public:
     void update(float radius, ofBaseDraws &drawable);
     void draw(int x, int y);
     void draw(int x, int y, int w, int h);
+    ofFbo & getOutputFbo();
 private:
     ofShader hShader, vShader;
     ofFbo ping, pong;

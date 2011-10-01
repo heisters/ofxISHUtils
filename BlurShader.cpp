@@ -77,6 +77,10 @@ void BlurShader::update(float radius, ofBaseDraws &drawable){
     pong.end();
 }
 
+ofFbo & BlurShader::getOutputFbo(){
+    return pong;
+}
+
 void BlurShader::draw(int x, int y){
     pong.draw(x, y);
 }
